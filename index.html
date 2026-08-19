@@ -6,61 +6,202 @@
   <title>GENARUL</title>
   <meta name="description" content="GENARUL este o platformă în construcție pentru managerii care vor să înțeleagă mai bine ce se întâmplă în organizația lor și ce merită decis mai întâi.">
   <style>
+    :root {
+      color-scheme: light;
+      --ink: #151515;
+      --muted: #5d635f;
+      --line: #d9ded8;
+      --paper: #fbfbf7;
+      --soft: #eef3ee;
+      --accent: #1f6f50;
+      --accent-dark: #164c39;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, sans-serif;
-      background: #f7f7f4;
-      color: #171717;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(31, 111, 80, 0.10), transparent 34%),
+        linear-gradient(315deg, rgba(32, 71, 90, 0.10), transparent 38%),
+        var(--paper);
+      color: var(--ink);
     }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+    }
+
+    header,
+    footer {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
     main {
-      width: min(760px, calc(100% - 40px));
-      padding: 56px 0;
+      width: min(1120px, 100%);
+      margin: auto;
+      padding: 72px 0;
     }
-    h1 {
-      margin: 0 0 28px;
-      font-size: 44px;
-      letter-spacing: 0;
+
+    .hero {
+      max-width: 820px;
     }
-    h2 {
-      margin: 0 0 20px;
-      font-size: 30px;
-      line-height: 1.15;
-      letter-spacing: 0;
-    }
-    p {
-      max-width: 640px;
-      font-size: 19px;
-      line-height: 1.55;
-    }
-    a {
-      display: inline-block;
-      margin-top: 18px;
-      color: #171717;
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--accent-dark);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
       font-weight: 700;
     }
+
+    h1 {
+      margin: 26px 0 0;
+      max-width: 760px;
+      font-size: clamp(46px, 7vw, 86px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 28px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 8px;
+      padding: 0 20px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button.secondary {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--ink);
+    }
+
+    .note {
+      margin-top: 42px;
+      max-width: 620px;
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
     footer {
-      margin-top: 72px;
-      font-size: 13px;
-      color: #666;
+      padding-top: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        padding: 20px;
+      }
+
+      header,
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      main {
+        padding: 56px 0;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .lead {
+        font-size: 19px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>GENARUL</h1>
-    <h2>Mai puțin haos. Mai multă claritate.</h2>
-    <p>
-      O platformă în construcție pentru managerii care vor să înțeleagă mai bine
-      ce se întâmplă în organizația lor și ce merită decis mai întâi.
-    </p>
-    <p>
-      Disponibil momentan pentru discuții exploratorii și pilot ghidat.
-    </p>
-    <a href="mailto:contact@genarul.ro">Contact</a>
-    <footer>© 2026 GENARUL.RO — Toate drepturile rezervate</footer>
-  </main>
+  <div class="shell">
+    <header>
+      <div class="brand">GENARUL</div>
+      <div>În construcție controlată</div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div class="badge">Platformă pentru clarificare organizațională</div>
+        <h1 id="title">Mai puțin haos. Mai multă claritate.</h1>
+        <p class="lead">
+          O platformă în construcție pentru managerii care vor să înțeleagă mai bine
+          ce se întâmplă în organizația lor și ce merită decis mai întâi.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="mailto:contact@genarul.ro">Contact</a>
+          <a class="button secondary" href="mailto:contact@genarul.ro?subject=Discuție exploratorie GENARUL">Discuție exploratorie</a>
+        </div>
+        <p class="note">
+          Disponibil momentan pentru discuții exploratorii și pilot ghidat.
+          Nu promitem o lansare generală; construim controlat, cu atenție la context și decizie.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 GENARUL.RO</span>
+      <span>Toate drepturile rezervate</span>
+    </footer>
+  </div>
 </body>
 </html>
