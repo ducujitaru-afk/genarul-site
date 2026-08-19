@@ -1,103 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GENARUL</title>
-
+  <meta name="description" content="GENARUL este o platformă în construcție pentru managerii care vor să înțeleagă mai bine ce se întâmplă în organizația lor și ce merită decis mai întâi.">
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      background: #f7f7f4;
+      color: #171717;
     }
-
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:#0f172a;
-      color:white;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px;
+    main {
+      width: min(760px, calc(100% - 40px));
+      padding: 56px 0;
     }
-
-    .container{
-      max-width:900px;
-      text-align:center;
+    h1 {
+      margin: 0 0 28px;
+      font-size: 44px;
+      letter-spacing: 0;
     }
-
-    h1{
-      font-size:64px;
-      margin-bottom:20px;
-      color:#38bdf8;
+    h2 {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0;
     }
-
-    h2{
-      font-size:28px;
-      margin-bottom:30px;
-      font-weight:normal;
-      color:#e2e8f0;
+    p {
+      max-width: 640px;
+      font-size: 19px;
+      line-height: 1.55;
     }
-
-    p{
-      font-size:20px;
-      line-height:1.8;
-      color:#cbd5e1;
-      margin-bottom:40px;
+    a {
+      display: inline-block;
+      margin-top: 18px;
+      color: #171717;
+      font-weight: 700;
     }
-
-    .button{
-      display:inline-block;
-      padding:16px 32px;
-      background:#38bdf8;
-      color:#0f172a;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .button:hover{
-      background:white;
-    }
-
-    .footer{
-      margin-top:60px;
-      font-size:14px;
-      color:#94a3b8;
+    footer {
+      margin-top: 72px;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
-
 <body>
-
-  <div class="container">
-
+  <main>
     <h1>GENARUL</h1>
-
-    <h2>
-      Platformă inteligentă pentru performanță organizațională,
-      conformitate și management operațional.
-    </h2>
-
+    <h2>Mai puțin haos. Mai multă claritate.</h2>
     <p>
-      Construim un ecosistem digital care conectează procese,
-      evaluări, riscuri, documentație, conformitate și analiză
-      operațională într-o singură platformă modernă.
+      O platformă în construcție pentru managerii care vor să înțeleagă mai bine
+      ce se întâmplă în organizația lor și ce merită decis mai întâi.
     </p>
-
-   <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@genarul.ro" target="_blank">
-      Contact
-    </a>
-
-    <div class="footer">
-      © 2026 GENARUL.RO — Toate drepturile rezervate
-    </div>
-
-  </div>
-
+    <p>
+      Disponibil momentan pentru discuții exploratorii și pilot ghidat.
+    </p>
+    <a href="mailto:contact@genarul.ro">Contact</a>
+    <footer>© 2026 GENARUL.RO — Toate drepturile rezervate</footer>
+  </main>
 </body>
 </html>
